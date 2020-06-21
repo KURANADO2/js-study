@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合案例-倒计时效果</title>
+    <script>
+        function countDown(time) {
+            // 当前时间毫秒数
+            var now = +new Date();
+            // 目标时间毫秒数
+            var inputTime = +new Date(time);
+            console.log(now);
+            console.log(inputTime);
+            // 时间差
+            var times = inputTime - now;
+            // 毫秒数转秒数
+            times /= 1000;
+            // 天数
+            var day = parseInt(times / 60 / 60 / 24);
+            day = day < 10 ? '0' + day : day;
+            // 小时数
+            var hour = parseInt(times / 60 / 60 % 24);
+            hour = hour < 10 ? '0' + hour : hour;
+            // 分数
+            var min = parseInt(times / 60 % 60);
+            min = min < 10 ? '0' + min : min;
+            // 秒数
+            var sec = parseInt(times % 60);
+            sec = sec < 10 ? '0' + sec : sec;
+            return day + ' 天 ' + hour + ' 时 ' + min + ' 分 ' + sec + ' 秒';
+        }
+        console.log(countDown('2020-07-02 09:00:00'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -7,18 +7,10 @@
 </head>
 <body>
     <script>
-        var num = 1;
-        function fun() {
-            console.log(num); // 1 全局变量
-            var num2 = 2;
-            console.log(num2); // 2 局部变量
-            num3 = 3;
-            console.log(num3); // 3 全局变量
-        }
-        // console.log(num2); // undefined 局部变量
-        console.log(num3); // 3 全局变量
-
-        fun();
+        var bodyEle = document.body;
+        console.log(bodyEle);
+        var htmlEle = document.documentElement;
+        console.log(htmlEle);
     </script>
 </body>
 </html>
