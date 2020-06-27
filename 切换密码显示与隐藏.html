@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切换密码显示与隐藏</title>
+    <style>
+        .box {
+            position: relative;
+            margin: 100px auto;
+            padding-left: 10px;
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+        }
+        .box input {
+            width: 360px;
+            height: 30px;
+            outline: none;
+            border: 0;
+        }
+        .box img {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="password" id="pass"/>
+        <label for="pass">
+            <img src="./images/close.png" alt="">
+        </label>
+    </div>
+    <script>
+        var pass = document.getElementById('pass');
+        var img = document.querySelector('img');
+        var flag = 1;
+        pass.onclick = function() {
+            flag = !flag;
+            if (flag) {
+                pass.type = 'text';
+                img.src = './images/open.png';
+            } else {
+                pass.type = 'password';
+                img.src = './images/close.png';
+            }
+        }
+    </script>
+</body>
+</html>

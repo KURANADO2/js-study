@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            display: block;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="cat">猫</button>
+    <button id="rabbit">兔子</button>
+    <img src="./images/cat.jpg" alt="" title="猫">
+    <script>
+        var cat = document.getElementById('cat');
+        var rabbit = document.getElementById('rabbit');
+        var img = document.querySelector('img');
+        cat.onclick = function() {
+            img.src = './images/cat.jpg';
+            img.title = '猫';
+        }
+        rabbit.onclick = function() {
+            img.src = './images/rabbit.gif';
+            img.title = '兔子';
+        }
+    </script>
+</body>
+</html>
