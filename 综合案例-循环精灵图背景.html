@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合案例-循环精灵图背景</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            margin: 100px auto;
+            width: 216px;
+        }
+        ul li {
+            float: left;
+            margin: 15px;
+            width: 24px;
+            height: 24px;
+            list-style: none;
+            background: url('./images/sprite.png') no-repeat 0 -44px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        var list = document.querySelectorAll('li');
+        for (var i = 0; i < list.length; i ++) {
+            var index = i * 44;
+            list[i].style.backgroundPosition = '0 -' + index + 'px';
+        }
+    </script>
+</body>
+</html>

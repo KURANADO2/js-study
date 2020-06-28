@@ -5,17 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .first {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+        .second {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 5px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <button id="btn">点击</button>
-    <input type="text" value="请输入内容"/>
+    <div class="first">文本</div>
     <script>
-        var btn = document.getElementById('btn');
-        var input = document.querySelector('input');
-        btn.onclick = function() {
-            input.value = '被点击了';
-            this.disabled = true; // 或者 btn.disabled = true;
+        var div = document.querySelector('div');
+        div.onclick = function() {
+            // 用 second 类样式覆盖 first 类样式
+            this.className = 'second';
+            // 如果想保留多个类样式，则使用如下写法
+            // this.className = 'first second';
         }
     </script>
 </body>

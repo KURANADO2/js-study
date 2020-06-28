@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合案例-显示隐藏文本框内内容</title>
+    <style>
+        input {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" value="手机"/>
+    </div>
+    <script>
+        var text = document.querySelector('input');
+        // 表单获得焦点
+        text.onfocus = function() {
+            if (this.value === '手机') {
+                this.value = '';
+            }
+            this.style.color = '#333';
+        }
+        // 表单失去焦点
+        text.onblur = function() {
+            if (this.value === '') {
+                this.value = '手机';
+            }
+            this.style.color = '#999';
+        }
+    </script>
+</body>
+</html>
